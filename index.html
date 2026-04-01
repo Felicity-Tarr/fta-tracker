@@ -189,7 +189,8 @@
       border: 6px solid transparent;
       border-top-color: #1a202c;
     }
-    .badge:hover .tooltip {
+    .badge:hover .tooltip,
+    .badge.tooltip-open .tooltip {
       visibility: visible;
       opacity: 1;
     }
@@ -520,6 +521,21 @@
   ["search","filter-status","filter-region","filter-zonos"].forEach(id => {
     document.getElementById(id).addEventListener("input", () => render(filterData()));
   });
+
+  // Mobile tap-to-toggle tooltips
+  document.addEventListener("touchstart", function(e) {
+    const badge = e.target.closest(".badge");
+    if (badge) {
+      e.preventDefault();
+      const isOpen = badge.classList.contains("tooltip-open");
+      // close all open tooltips first
+      document.querySelectorAll(".badge.tooltip-open").forEach(b => b.classList.remove("tooltip-open"));
+      if (!isOpen) badge.classList.add("tooltip-open");
+    } else {
+      // tap anywhere else — close all
+      document.querySelectorAll(".badge.tooltip-open").forEach(b => b.classList.remove("tooltip-open"));
+    }
+  }, { passive: false });
 
   loadData();
 </script>
