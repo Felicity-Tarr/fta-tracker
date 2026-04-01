@@ -172,6 +172,7 @@
       line-height: 1.5;
       text-transform: none;
       letter-spacing: 0;
+      white-space: normal;
       padding: 0.55rem 0.75rem;
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.25);
@@ -256,19 +257,18 @@
 
     /* ── Zonos cipher badge ── */
     .zonos-badge {
-      position: absolute;
-      top: 0.75rem;
-      right: 0.75rem;
-      width: 32px;
-      height: 32px;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
       cursor: default;
+      position: relative;
     }
     .zonos-badge img {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
       object-fit: contain;
     }
     .zonos-badge .zt {
@@ -303,9 +303,6 @@
       visibility: visible;
       opacity: 1;
     }
-    /* make card relative so badge positions correctly */
-    .card { position: relative; }
-
     /* ── Footer ── */
     footer {
       text-align: center;
@@ -481,9 +478,9 @@
 
       return `
         <div class="card">
-          ${zonosBadge}
           <div class="card-header">
             <span class="card-name">${escHtml(a.name)}</span>
+            ${zonosBadge}
             <span class="badge ${badgeClass}">${escHtml(a.status)}<span class="tooltip">${escHtml(BADGE_TOOLTIPS[a.status] ?? "")}</span></span>
           </div>
           <div class="card-parties"><strong>Parties:</strong> ${escHtml(partiesText)}</div>
