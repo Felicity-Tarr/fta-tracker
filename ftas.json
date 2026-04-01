@@ -1,0 +1,893 @@
+[
+  {
+    "name": "United States-Mexico-Canada Agreement (USMCA)",
+    "parties": ["United States", "Mexico", "Canada"],
+    "regions": ["North America"],
+    "status": "In Force",
+    "year": 2020,
+    "description": "Replaces NAFTA; covers trade in goods, services, digital trade, IP, and labor standards.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement"
+  },
+  {
+    "name": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP)",
+    "parties": ["Australia", "Brunei", "Canada", "Chile", "Japan", "Malaysia", "Mexico", "New Zealand", "Peru", "Singapore", "Vietnam"],
+    "regions": ["Asia-Pacific", "Americas"],
+    "status": "In Force",
+    "year": 2018,
+    "description": "Major multilateral agreement covering 11 Pacific Rim nations; successor to the TPP.",
+    "link": "https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/cptpp/"
+  },
+  {
+    "name": "Regional Comprehensive Economic Partnership (RCEP)",
+    "parties": ["China", "Japan", "South Korea", "Australia", "New Zealand", "Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2022,
+    "description": "World's largest trade bloc by GDP; covers goods, services, investment, and e-commerce.",
+    "link": "https://rcepsec.org/"
+  },
+  {
+    "name": "EU-UK Trade and Cooperation Agreement (TCA)",
+    "parties": ["European Union", "United Kingdom"],
+    "regions": ["Europe"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "Post-Brexit trade deal covering goods, services, fisheries, and regulatory cooperation.",
+    "link": "https://www.gov.uk/government/publications/ukeu-trade-and-cooperation-agreement-ts-no82021"
+  },
+  {
+    "name": "African Continental Free Trade Area (AfCFTA)",
+    "parties": ["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cameroon", "Cape Verde", "Central African Republic", "Chad", "Comoros", "Democratic Republic of Congo", "Republic of Congo", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Ivory Coast", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Tanzania", "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe"],
+    "regions": ["Africa"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "Largest FTA by number of countries; aims to create a single continental market for goods and services.",
+    "link": "https://au-afcfta.org/"
+  },
+  {
+    "name": "ASEAN Free Trade Area (AFTA)",
+    "parties": ["Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 1993,
+    "description": "Reduces tariffs among ASEAN members; foundation of broader ASEAN economic integration.",
+    "link": "https://asean.org/our-communities/asean-economic-community/trade/"
+  },
+  {
+    "name": "Mercosur",
+    "parties": ["Argentina", "Brazil", "Paraguay", "Uruguay"],
+    "regions": ["South America"],
+    "status": "In Force",
+    "year": 1995,
+    "description": "South American customs union with free movement of goods, services, and people.",
+    "link": "https://www.mercosur.int/en/"
+  },
+  {
+    "name": "Gulf Cooperation Council (GCC) Common Market",
+    "parties": ["Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Oman"],
+    "regions": ["Middle East"],
+    "status": "In Force",
+    "year": 2008,
+    "description": "Common market allowing free movement of goods, services, capital, and citizens.",
+    "link": "https://www.gcc-sg.org/en-us/Pages/default.aspx"
+  },
+  {
+    "name": "Greater Arab Free Trade Area (GAFTA)",
+    "parties": ["Algeria", "Bahrain", "Egypt", "Iraq", "Jordan", "Kuwait", "Lebanon", "Libya", "Morocco", "Oman", "Qatar", "Saudi Arabia", "Sudan", "Syria", "Tunisia", "United Arab Emirates", "Yemen"],
+    "regions": ["Middle East", "Africa"],
+    "status": "In Force",
+    "year": 1998,
+    "description": "Free trade area among Arab League members aimed at eliminating tariffs on goods.",
+    "link": "https://wits.worldbank.org/gptad/database_landing.aspx"
+  },
+  {
+    "name": "EU-Japan Economic Partnership Agreement (EPA)",
+    "parties": ["European Union", "Japan"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2019,
+    "description": "Covers nearly all trade between EU and Japan; one of the largest bilateral trade deals.",
+    "link": "https://ec.europa.eu/trade/policy/in-focus/eu-japan-economic-partnership-agreement/"
+  },
+  {
+    "name": "EU-Canada Comprehensive Economic and Trade Agreement (CETA)",
+    "parties": ["European Union", "Canada"],
+    "regions": ["Europe", "North America"],
+    "status": "In Force",
+    "year": 2017,
+    "description": "Provisionally applied since 2017; covers goods, services, investment, and government procurement.",
+    "link": "https://ec.europa.eu/trade/policy/in-focus/ceta/"
+  },
+  {
+    "name": "EU-South Korea Free Trade Agreement",
+    "parties": ["European Union", "South Korea"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2011,
+    "description": "First EU FTA with an Asian country; significantly reduced tariffs on both sides.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/south-korea/"
+  },
+  {
+    "name": "EU-Singapore Free Trade Agreement (EUSFTA)",
+    "parties": ["European Union", "Singapore"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2019,
+    "description": "Covers trade in goods, services, and investment; gateway to ASEAN markets.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/singapore/"
+  },
+  {
+    "name": "EU-Vietnam Free Trade Agreement (EVFTA)",
+    "parties": ["European Union", "Vietnam"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2020,
+    "description": "Eliminates over 99% of tariffs; includes commitments on labor rights and environment.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/vietnam/"
+  },
+  {
+    "name": "EU-Mexico Global Agreement (modernised)",
+    "parties": ["European Union", "Mexico"],
+    "regions": ["Europe", "North America"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Updated version of the 2000 EU-Mexico agreement; concluded in 2023, pending ratification.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/mexico/"
+  },
+  {
+    "name": "EU-Mercosur Association Agreement",
+    "parties": ["European Union", "Argentina", "Brazil", "Paraguay", "Uruguay"],
+    "regions": ["Europe", "South America"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Political agreement reached in 2019 and finalized in 2024; pending ratification.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/regions/mercosur/"
+  },
+  {
+    "name": "EU-Chile Advanced Framework Agreement",
+    "parties": ["European Union", "Chile"],
+    "regions": ["Europe", "South America"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Modernised agreement concluded in 2023; successor to the 2003 EU-Chile Association Agreement.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/chile/"
+  },
+  {
+    "name": "EU-New Zealand Free Trade Agreement",
+    "parties": ["European Union", "New Zealand"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Concluded in 2023; pending ratification — will eliminate tariffs on most goods.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/new-zealand/"
+  },
+  {
+    "name": "EU-Australia Free Trade Agreement",
+    "parties": ["European Union", "Australia"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "Under Negotiation",
+    "year": null,
+    "description": "Negotiations ongoing since 2018; stalled over agricultural market access issues.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/australia/"
+  },
+  {
+    "name": "EU-India Free Trade Agreement",
+    "parties": ["European Union", "India"],
+    "regions": ["Europe", "South Asia"],
+    "status": "Under Negotiation",
+    "year": null,
+    "description": "Relaunched in 2022 after a decade-long pause; covers goods, services, and investment.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/india/"
+  },
+  {
+    "name": "EU-Indonesia Comprehensive Economic Partnership Agreement (CEPA)",
+    "parties": ["European Union", "Indonesia"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "Under Negotiation",
+    "year": null,
+    "description": "Negotiations launched in 2016; ongoing discussions on goods, services, and sustainability.",
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/indonesia/"
+  },
+  {
+    "name": "US-South Korea Free Trade Agreement (KORUS)",
+    "parties": ["United States", "South Korea"],
+    "regions": ["North America", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2012,
+    "description": "One of the largest US bilateral FTAs; modernised in 2019 with updated auto and tariff provisions.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/korus-fta"
+  },
+  {
+    "name": "US-Australia Free Trade Agreement (AUSFTA)",
+    "parties": ["United States", "Australia"],
+    "regions": ["North America", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2005,
+    "description": "Eliminates tariffs on the majority of goods; includes services, investment, and IP provisions.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/australian-fta"
+  },
+  {
+    "name": "US-Singapore Free Trade Agreement",
+    "parties": ["United States", "Singapore"],
+    "regions": ["North America", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2004,
+    "description": "Comprehensive agreement covering goods, services, financial services, and e-commerce.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/singapore-fta"
+  },
+  {
+    "name": "US-Chile Free Trade Agreement",
+    "parties": ["United States", "Chile"],
+    "regions": ["North America", "South America"],
+    "status": "In Force",
+    "year": 2004,
+    "description": "Eliminates tariffs on over 90% of goods immediately; includes investment and IP provisions.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/chile-fta"
+  },
+  {
+    "name": "US-Colombia Trade Promotion Agreement",
+    "parties": ["United States", "Colombia"],
+    "regions": ["North America", "South America"],
+    "status": "In Force",
+    "year": 2012,
+    "description": "Eliminated tariffs on most goods; includes labor and environmental provisions.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/colombia-fta"
+  },
+  {
+    "name": "US-Peru Trade Promotion Agreement",
+    "parties": ["United States", "Peru"],
+    "regions": ["North America", "South America"],
+    "status": "In Force",
+    "year": 2009,
+    "description": "Provides duty-free access for most products; includes IP and environmental commitments.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/peru-tpa"
+  },
+  {
+    "name": "Dominican Republic-Central America-United States FTA (CAFTA-DR)",
+    "parties": ["United States", "Costa Rica", "Dominican Republic", "El Salvador", "Guatemala", "Honduras", "Nicaragua"],
+    "regions": ["North America", "Central America", "Caribbean"],
+    "status": "In Force",
+    "year": 2006,
+    "description": "Multilateral agreement eliminating most tariffs on goods between the US and six Latin American nations.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/cafta-dr-dominican-republic-central-america-fta"
+  },
+  {
+    "name": "US-Jordan Free Trade Agreement",
+    "parties": ["United States", "Jordan"],
+    "regions": ["North America", "Middle East"],
+    "status": "In Force",
+    "year": 2001,
+    "description": "First US FTA with an Arab country; covers goods, services, IP, and includes labor provisions.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/jordan-fta"
+  },
+  {
+    "name": "US-Israel Free Trade Agreement",
+    "parties": ["United States", "Israel"],
+    "regions": ["North America", "Middle East"],
+    "status": "In Force",
+    "year": 1985,
+    "description": "First US FTA ever; provides duty-free access for nearly all goods.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/israel-fta"
+  },
+  {
+    "name": "US-Bahrain Free Trade Agreement",
+    "parties": ["United States", "Bahrain"],
+    "regions": ["North America", "Middle East"],
+    "status": "In Force",
+    "year": 2006,
+    "description": "Eliminates tariffs on most goods; covers services, IP, and investment.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/bahrain-fta"
+  },
+  {
+    "name": "US-Morocco Free Trade Agreement",
+    "parties": ["United States", "Morocco"],
+    "regions": ["North America", "Africa"],
+    "status": "In Force",
+    "year": 2006,
+    "description": "US's first FTA with an African country; provides duty-free access for most goods.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/morocco-fta"
+  },
+  {
+    "name": "US-Oman Free Trade Agreement",
+    "parties": ["United States", "Oman"],
+    "regions": ["North America", "Middle East"],
+    "status": "In Force",
+    "year": 2009,
+    "description": "Eliminates most tariffs; covers goods, services, investment, and IP.",
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/oman-fta"
+  },
+  {
+    "name": "UK-Australia Free Trade Agreement",
+    "parties": ["United Kingdom", "Australia"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2023,
+    "description": "Eliminates all tariffs on goods; one of UK's first major post-Brexit deals.",
+    "link": "https://www.gov.uk/guidance/uk-australia-free-trade-agreement-the-uks-strategic-approach"
+  },
+  {
+    "name": "UK-New Zealand Free Trade Agreement",
+    "parties": ["United Kingdom", "New Zealand"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2023,
+    "description": "Comprehensive agreement eliminating tariffs on all goods; includes digital trade provisions.",
+    "link": "https://www.gov.uk/guidance/uk-new-zealand-free-trade-agreement"
+  },
+  {
+    "name": "UK-Japan Comprehensive Economic Partnership Agreement (CEPA)",
+    "parties": ["United Kingdom", "Japan"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "UK's first major post-Brexit deal; goes beyond the EU-Japan EPA in digital and data provisions.",
+    "link": "https://www.gov.uk/government/collections/uk-japan-comprehensive-economic-partnership-agreement"
+  },
+  {
+    "name": "UK-Singapore Free Trade Agreement",
+    "parties": ["United Kingdom", "Singapore"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2024,
+    "description": "Comprehensive deal covering goods, services, digital trade, and green economy.",
+    "link": "https://www.gov.uk/guidance/uk-singapore-free-trade-agreement"
+  },
+  {
+    "name": "UK-India Free Trade Agreement",
+    "parties": ["United Kingdom", "India"],
+    "regions": ["Europe", "South Asia"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Concluded in May 2025 after three years of negotiations; one of UK's biggest post-Brexit trade deals.",
+    "link": "https://www.gov.uk/government/collections/uk-india-free-trade-agreement-negotiations"
+  },
+  {
+    "name": "UK-Gulf Cooperation Council (GCC) FTA",
+    "parties": ["United Kingdom", "Saudi Arabia", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Oman"],
+    "regions": ["Europe", "Middle East"],
+    "status": "Under Negotiation",
+    "year": null,
+    "description": "Negotiations ongoing since 2022 between UK and the six GCC member states.",
+    "link": "https://www.gov.uk/government/collections/uk-gulf-co-operation-council-gcc-fta-negotiations"
+  },
+  {
+    "name": "China-ASEAN Free Trade Area (ACFTA)",
+    "parties": ["China", "Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2005,
+    "description": "One of the largest FTAs by population; upgraded multiple times, most recently in 2019.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinaasean.shtml"
+  },
+  {
+    "name": "China-Australia Free Trade Agreement (ChAFTA)",
+    "parties": ["China", "Australia"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2015,
+    "description": "Eliminates or reduces tariffs on the majority of goods; covers services and investment.",
+    "link": "https://www.dfat.gov.au/trade/agreements/in-force/chafta"
+  },
+  {
+    "name": "China-New Zealand Free Trade Agreement",
+    "parties": ["China", "New Zealand"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2008,
+    "description": "First FTA between China and a developed country; upgraded in 2021.",
+    "link": "https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/china-fta/"
+  },
+  {
+    "name": "China-South Korea Free Trade Agreement",
+    "parties": ["China", "South Korea"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2015,
+    "description": "Covers goods, services, and investment between two major Asian economies.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinakorea.shtml"
+  },
+  {
+    "name": "China-Switzerland Free Trade Agreement",
+    "parties": ["China", "Switzerland"],
+    "regions": ["Asia-Pacific", "Europe"],
+    "status": "In Force",
+    "year": 2014,
+    "description": "First FTA between China and a continental European country.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinaswiss.shtml"
+  },
+  {
+    "name": "China-Iceland Free Trade Agreement",
+    "parties": ["China", "Iceland"],
+    "regions": ["Asia-Pacific", "Europe"],
+    "status": "In Force",
+    "year": 2014,
+    "description": "Comprehensive agreement covering goods, services, investment, and IP.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinaiceland.shtml"
+  },
+  {
+    "name": "China-Chile Free Trade Agreement",
+    "parties": ["China", "Chile"],
+    "regions": ["Asia-Pacific", "South America"],
+    "status": "In Force",
+    "year": 2006,
+    "description": "First FTA between China and a Latin American country; upgraded in 2019.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinachile.shtml"
+  },
+  {
+    "name": "China-Peru Free Trade Agreement",
+    "parties": ["China", "Peru"],
+    "regions": ["Asia-Pacific", "South America"],
+    "status": "In Force",
+    "year": 2010,
+    "description": "Covers goods, services, and investment; upgrade negotiations launched in 2019.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinaperu.shtml"
+  },
+  {
+    "name": "China-Pakistan Free Trade Agreement",
+    "parties": ["China", "Pakistan"],
+    "regions": ["Asia-Pacific", "South Asia"],
+    "status": "In Force",
+    "year": 2007,
+    "description": "Phase II entered into force in 2020 with deeper tariff cuts; part of CPEC strategy.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinapakistan.shtml"
+  },
+  {
+    "name": "China-Georgia Free Trade Agreement",
+    "parties": ["China", "Georgia"],
+    "regions": ["Asia-Pacific", "Europe"],
+    "status": "In Force",
+    "year": 2018,
+    "description": "First FTA between China and a CIS country; provides zero tariffs on most goods.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinageorgia.shtml"
+  },
+  {
+    "name": "China-Mauritius Free Trade Agreement",
+    "parties": ["China", "Mauritius"],
+    "regions": ["Asia-Pacific", "Africa"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "China's first FTA with an African country; covers goods and services.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinamauritius.shtml"
+  },
+  {
+    "name": "China-Cambodia Free Trade Agreement",
+    "parties": ["China", "Cambodia"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2022,
+    "description": "Eliminates tariffs on 98.9% of goods between the two countries.",
+    "link": "https://fta.mofcom.gov.cn/topic/chinacambodia.shtml"
+  },
+  {
+    "name": "China-Nicaragua Free Trade Agreement",
+    "parties": ["China", "Nicaragua"],
+    "regions": ["Asia-Pacific", "Central America"],
+    "status": "In Force",
+    "year": 2024,
+    "description": "Signed in 2023 and entered into force in 2024 following Nicaragua switching recognition from Taiwan.",
+    "link": "https://fta.mofcom.gov.cn/"
+  },
+  {
+    "name": "Japan-ASEAN Comprehensive Economic Partnership (AJCEP)",
+    "parties": ["Japan", "Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2008,
+    "description": "Framework agreement; individual country agreements phased in from 2008 onward.",
+    "link": "https://www.mofa.go.jp/policy/economy/fta/asean.html"
+  },
+  {
+    "name": "Japan-Australia Economic Partnership Agreement (JAEPA)",
+    "parties": ["Japan", "Australia"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2015,
+    "description": "Australia's first FTA with a top-five trading partner; significant agricultural and auto tariff cuts.",
+    "link": "https://www.dfat.gov.au/trade/agreements/in-force/jaepa"
+  },
+  {
+    "name": "Japan-India Comprehensive Economic Partnership Agreement (CEPA)",
+    "parties": ["Japan", "India"],
+    "regions": ["Asia-Pacific", "South Asia"],
+    "status": "In Force",
+    "year": 2011,
+    "description": "Covers goods, services, investment, and IP; includes an early harvest for IT products.",
+    "link": "https://www.mofa.go.jp/policy/economy/fta/india.html"
+  },
+  {
+    "name": "Japan-UK Comprehensive Economic Partnership Agreement (CEPA)",
+    "parties": ["Japan", "United Kingdom"],
+    "regions": ["Asia-Pacific", "Europe"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "Successor to EU-Japan EPA for post-Brexit UK; adds digital and data flow provisions.",
+    "link": "https://www.mofa.go.jp/policy/economy/fta/uk.html"
+  },
+  {
+    "name": "Japan-EU Economic Partnership Agreement (EPA)",
+    "parties": ["Japan", "European Union"],
+    "regions": ["Asia-Pacific", "Europe"],
+    "status": "In Force",
+    "year": 2019,
+    "description": "Creates a trade zone covering ~635 million people; eliminates most tariffs.",
+    "link": "https://www.mofa.go.jp/policy/economy/fta/eu.html"
+  },
+  {
+    "name": "India-UAE Comprehensive Economic Partnership Agreement (CEPA)",
+    "parties": ["India", "United Arab Emirates"],
+    "regions": ["South Asia", "Middle East"],
+    "status": "In Force",
+    "year": 2022,
+    "description": "India's fastest-concluded FTA; covers goods, services, investment, and IP.",
+    "link": "https://commerce.gov.in/trade-agreements/"
+  },
+  {
+    "name": "India-ASEAN Free Trade Agreement",
+    "parties": ["India", "Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"],
+    "regions": ["South Asia", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2010,
+    "description": "Covers trade in goods; services agreement followed in 2015. Under review for upgrade.",
+    "link": "https://commerce.gov.in/trade-agreements/"
+  },
+  {
+    "name": "India-South Korea Comprehensive Economic Partnership Agreement (CEPA)",
+    "parties": ["India", "South Korea"],
+    "regions": ["South Asia", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2010,
+    "description": "Covers goods, services, and investment; upgrade negotiations launched in 2021.",
+    "link": "https://commerce.gov.in/trade-agreements/"
+  },
+  {
+    "name": "India-Sri Lanka Free Trade Agreement",
+    "parties": ["India", "Sri Lanka"],
+    "regions": ["South Asia"],
+    "status": "In Force",
+    "year": 2000,
+    "description": "India's first bilateral FTA; significantly reduces tariffs on goods.",
+    "link": "https://commerce.gov.in/trade-agreements/"
+  },
+  {
+    "name": "India-Mauritius Comprehensive Economic Cooperation and Partnership Agreement (CECPA)",
+    "parties": ["India", "Mauritius"],
+    "regions": ["South Asia", "Africa"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "India's first trade deal with an African country; covers goods, services, and investment.",
+    "link": "https://commerce.gov.in/trade-agreements/"
+  },
+  {
+    "name": "India-UK Free Trade Agreement",
+    "parties": ["India", "United Kingdom"],
+    "regions": ["South Asia", "Europe"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Concluded in May 2025 after three years of negotiations; awaiting ratification.",
+    "link": "https://www.gov.uk/government/collections/uk-india-free-trade-agreement-negotiations"
+  },
+  {
+    "name": "Australia-New Zealand Closer Economic Relations (ANZCERTA)",
+    "parties": ["Australia", "New Zealand"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 1983,
+    "description": "One of the world's most comprehensive bilateral FTAs; free movement of goods, services, and people.",
+    "link": "https://www.dfat.gov.au/trade/agreements/in-force/anzcerta"
+  },
+  {
+    "name": "Australia-Singapore Free Trade Agreement (SAFTA)",
+    "parties": ["Australia", "Singapore"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2003,
+    "description": "First FTA for both countries; upgraded in 2017 with digital economy provisions.",
+    "link": "https://www.dfat.gov.au/trade/agreements/in-force/safta"
+  },
+  {
+    "name": "Australia-United States Free Trade Agreement (AUSFTA)",
+    "parties": ["Australia", "United States"],
+    "regions": ["Asia-Pacific", "North America"],
+    "status": "In Force",
+    "year": 2005,
+    "description": "Broad bilateral deal covering goods, services, investment, and government procurement.",
+    "link": "https://www.dfat.gov.au/trade/agreements/in-force/ausfta"
+  },
+  {
+    "name": "Australia-India Economic Cooperation and Trade Agreement (ECTA)",
+    "parties": ["Australia", "India"],
+    "regions": ["Asia-Pacific", "South Asia"],
+    "status": "In Force",
+    "year": 2022,
+    "description": "First FTA between the two countries; interim agreement covering goods and services.",
+    "link": "https://www.dfat.gov.au/trade/agreements/in-force/ai-ecta"
+  },
+  {
+    "name": "Pacific Agreement on Closer Economic Relations Plus (PACER Plus)",
+    "parties": ["Australia", "New Zealand", "Cook Islands", "Kiribati", "Marshall Islands", "Micronesia", "Nauru", "Niue", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands", "Tonga", "Tuvalu", "Vanuatu"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2020,
+    "description": "Development-focused trade agreement for Pacific Island nations.",
+    "link": "https://pacerplus.org/"
+  },
+  {
+    "name": "Pacific Alliance",
+    "parties": ["Chile", "Colombia", "Mexico", "Peru"],
+    "regions": ["South America", "North America"],
+    "status": "In Force",
+    "year": 2016,
+    "description": "Deep integration agreement; free movement of goods, services, capital, and people.",
+    "link": "https://alianzapacifico.net/en/"
+  },
+  {
+    "name": "Andean Community (CAN)",
+    "parties": ["Bolivia", "Colombia", "Ecuador", "Peru"],
+    "regions": ["South America"],
+    "status": "In Force",
+    "year": 1969,
+    "description": "Customs union with free movement of goods, people, and capital.",
+    "link": "https://www.comunidadandina.org/en/"
+  },
+  {
+    "name": "Chile-Canada Free Trade Agreement",
+    "parties": ["Chile", "Canada"],
+    "regions": ["South America", "North America"],
+    "status": "In Force",
+    "year": 1997,
+    "description": "Covers goods, services, and investment; one of Chile's earliest bilateral FTAs.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/chile-chili/index.aspx"
+  },
+  {
+    "name": "Chile-Japan Economic Partnership Agreement",
+    "parties": ["Chile", "Japan"],
+    "regions": ["South America", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2007,
+    "description": "Japan's first EPA in Latin America; covers goods, services, and investment.",
+    "link": "https://www.mofa.go.jp/policy/economy/fta/chile.html"
+  },
+  {
+    "name": "EFTA-Chile Free Trade Agreement",
+    "parties": ["Switzerland", "Norway", "Iceland", "Liechtenstein", "Chile"],
+    "regions": ["Europe", "South America"],
+    "status": "In Force",
+    "year": 2004,
+    "description": "Broad bilateral deal between EFTA states and Chile covering goods, services, and IP.",
+    "link": "https://www.efta.int/free-trade/free-trade-agreements/chile"
+  },
+  {
+    "name": "EFTA-South Korea Free Trade Agreement",
+    "parties": ["Switzerland", "Norway", "Iceland", "Liechtenstein", "South Korea"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2006,
+    "description": "Eliminates tariffs on most goods; includes services, investment, and IP.",
+    "link": "https://www.efta.int/free-trade/free-trade-agreements/south-korea"
+  },
+  {
+    "name": "EFTA-Singapore Free Trade Agreement",
+    "parties": ["Switzerland", "Norway", "Iceland", "Liechtenstein", "Singapore"],
+    "regions": ["Europe", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2003,
+    "description": "Comprehensive agreement with strong services and investment provisions.",
+    "link": "https://www.efta.int/free-trade/free-trade-agreements/singapore"
+  },
+  {
+    "name": "EFTA-India Trade and Economic Partnership Agreement (TEPA)",
+    "parties": ["Switzerland", "Norway", "Iceland", "Liechtenstein", "India"],
+    "regions": ["Europe", "South Asia"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Concluded in March 2024; includes a landmark $100bn investment commitment from EFTA to India.",
+    "link": "https://www.efta.int/free-trade/free-trade-agreements/india"
+  },
+  {
+    "name": "South Asian Free Trade Area (SAFTA)",
+    "parties": ["Afghanistan", "Bangladesh", "Bhutan", "India", "Maldives", "Nepal", "Pakistan", "Sri Lanka"],
+    "regions": ["South Asia"],
+    "status": "In Force",
+    "year": 2006,
+    "description": "SAARC-based agreement to reduce intra-regional tariffs; implementation has been slow.",
+    "link": "https://saarc-sec.org/SAARC-Summits/35/South-Asian-Free-Trade-Area"
+  },
+  {
+    "name": "Common Market for Eastern and Southern Africa (COMESA)",
+    "parties": ["Burundi", "Comoros", "Democratic Republic of Congo", "Djibouti", "Egypt", "Eritrea", "Eswatini", "Ethiopia", "Kenya", "Libya", "Madagascar", "Malawi", "Mauritius", "Rwanda", "Seychelles", "Somalia", "Sudan", "Tanzania", "Tunisia", "Uganda", "Zambia", "Zimbabwe"],
+    "regions": ["Africa"],
+    "status": "In Force",
+    "year": 1994,
+    "description": "Economic integration bloc for eastern and southern Africa; aims for a full common market.",
+    "link": "https://www.comesa.int/"
+  },
+  {
+    "name": "East African Community (EAC) Customs Union",
+    "parties": ["Burundi", "Democratic Republic of Congo", "Kenya", "Rwanda", "South Sudan", "Tanzania", "Uganda"],
+    "regions": ["Africa"],
+    "status": "In Force",
+    "year": 2005,
+    "description": "Customs union with a common external tariff; common market protocol entered force in 2010.",
+    "link": "https://www.eac.int/"
+  },
+  {
+    "name": "Southern African Customs Union (SACU)",
+    "parties": ["South Africa", "Botswana", "Eswatini", "Lesotho", "Namibia"],
+    "regions": ["Africa"],
+    "status": "In Force",
+    "year": 1910,
+    "description": "World's oldest customs union; members share a common external tariff and revenue pool.",
+    "link": "https://www.sacu.int/"
+  },
+  {
+    "name": "Economic Community of West African States (ECOWAS) Trade Liberalisation Scheme",
+    "parties": ["Benin", "Burkina Faso", "Cape Verde", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Ivory Coast", "Liberia", "Mali", "Niger", "Nigeria", "Senegal", "Sierra Leone", "Togo"],
+    "regions": ["Africa"],
+    "status": "In Force",
+    "year": 1990,
+    "description": "Enables free movement of goods among member states; full customs union still in progress.",
+    "link": "https://www.ecowas.int/"
+  },
+  {
+    "name": "Tripartite Free Trade Area (TFTA)",
+    "parties": ["COMESA", "EAC", "SADC"],
+    "regions": ["Africa"],
+    "status": "Concluded",
+    "year": null,
+    "description": "Combines three African regional blocs; signed 2015, pending sufficient ratifications.",
+    "link": "https://www.tralac.org/resources/by-region/tripartite-fta.html"
+  },
+  {
+    "name": "Eurasian Economic Union (EAEU)",
+    "parties": ["Russia", "Belarus", "Kazakhstan", "Armenia", "Kyrgyzstan"],
+    "regions": ["Europe", "Central Asia"],
+    "status": "In Force",
+    "year": 2015,
+    "description": "Customs union and common market for Eurasian countries; successor to the Eurasian Customs Union.",
+    "link": "http://www.eaeunion.org/?lang=en"
+  },
+  {
+    "name": "EAEU-Vietnam Free Trade Agreement",
+    "parties": ["Russia", "Belarus", "Kazakhstan", "Armenia", "Kyrgyzstan", "Vietnam"],
+    "regions": ["Europe", "Central Asia", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2016,
+    "description": "First EAEU FTA with a non-CIS country; reduces tariffs on a wide range of goods.",
+    "link": "http://www.eaeunion.org/?lang=en"
+  },
+  {
+    "name": "EAEU-Iran Temporary Trade Agreement",
+    "parties": ["Russia", "Belarus", "Kazakhstan", "Armenia", "Kyrgyzstan", "Iran"],
+    "regions": ["Europe", "Central Asia", "Middle East"],
+    "status": "In Force",
+    "year": 2019,
+    "description": "Interim preferential trade agreement; full FTA negotiations ongoing.",
+    "link": "http://www.eaeunion.org/?lang=en"
+  },
+  {
+    "name": "EAEU-Serbia Free Trade Agreement",
+    "parties": ["Russia", "Belarus", "Kazakhstan", "Armenia", "Kyrgyzstan", "Serbia"],
+    "regions": ["Europe", "Central Asia"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "Preferential trade deal granting Serbian goods access to the EAEU market.",
+    "link": "http://www.eaeunion.org/?lang=en"
+  },
+  {
+    "name": "Trans-Pacific Strategic Economic Partnership (P4)",
+    "parties": ["Brunei", "Chile", "New Zealand", "Singapore"],
+    "regions": ["Asia-Pacific", "South America"],
+    "status": "In Force",
+    "year": 2006,
+    "description": "Forerunner to CPTPP; small multilateral agreement with zero tariffs on most goods.",
+    "link": "https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/p4/"
+  },
+  {
+    "name": "Digital Economy Partnership Agreement (DEPA)",
+    "parties": ["Chile", "New Zealand", "Singapore"],
+    "regions": ["South America", "Asia-Pacific"],
+    "status": "In Force",
+    "year": 2021,
+    "description": "World's first standalone digital trade agreement; covers e-commerce, data flows, and AI.",
+    "link": "https://www.mfat.govt.nz/en/trade/free-trade-agreements/free-trade-agreements-in-force/depa/"
+  },
+  {
+    "name": "Singapore-Australia Free Trade Agreement (SAFTA)",
+    "parties": ["Singapore", "Australia"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2003,
+    "description": "Covers goods, services, investment, and people movement; upgraded in 2017.",
+    "link": "https://www.mti.gov.sg/Trade/Free-Trade-Agreements/SAFTA"
+  },
+  {
+    "name": "India-MERCOSUR Preferential Trade Agreement",
+    "parties": ["India", "Argentina", "Brazil", "Paraguay", "Uruguay"],
+    "regions": ["South Asia", "South America"],
+    "status": "In Force",
+    "year": 2009,
+    "description": "Limited preferential deal covering around 450 tariff lines; upgrade under discussion.",
+    "link": "https://commerce.gov.in/trade-agreements/"
+  },
+  {
+    "name": "Canada-European Union Comprehensive Economic and Trade Agreement (CETA)",
+    "parties": ["Canada", "European Union"],
+    "regions": ["North America", "Europe"],
+    "status": "In Force",
+    "year": 2017,
+    "description": "Provisionally applied since 2017; covers goods, services, investment, and procurement.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/ceta-aecg/index.aspx"
+  },
+  {
+    "name": "Canada-Ukraine Free Trade Agreement (CUFTA)",
+    "parties": ["Canada", "Ukraine"],
+    "regions": ["North America", "Europe"],
+    "status": "In Force",
+    "year": 2017,
+    "description": "Modernised version signed in 2023 with expanded services and labor provisions; in force 2024.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/ukraine/index.aspx"
+  },
+  {
+    "name": "Canada-Chile Free Trade Agreement (CCFTA)",
+    "parties": ["Canada", "Chile"],
+    "regions": ["North America", "South America"],
+    "status": "In Force",
+    "year": 1997,
+    "description": "Long-standing bilateral agreement eliminating tariffs on most goods.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/chile-chili/index.aspx"
+  },
+  {
+    "name": "Canada-Colombia Free Trade Agreement",
+    "parties": ["Canada", "Colombia"],
+    "regions": ["North America", "South America"],
+    "status": "In Force",
+    "year": 2011,
+    "description": "Provides preferential access for goods; includes labor and environment side agreements.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/colombia-colombie/index.aspx"
+  },
+  {
+    "name": "Canada-Peru Free Trade Agreement (CPFTA)",
+    "parties": ["Canada", "Peru"],
+    "regions": ["North America", "South America"],
+    "status": "In Force",
+    "year": 2009,
+    "description": "Eliminates tariffs on most goods; includes investment and IP provisions.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/peru-perou/index.aspx"
+  },
+  {
+    "name": "Canada-Jordan Free Trade Agreement",
+    "parties": ["Canada", "Jordan"],
+    "regions": ["North America", "Middle East"],
+    "status": "In Force",
+    "year": 2012,
+    "description": "Covers goods, services, and investment; part of Canada's broader Middle East engagement.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/jordan-jordanie/index.aspx"
+  },
+  {
+    "name": "Canada-Morocco Free Trade Agreement",
+    "parties": ["Canada", "Morocco"],
+    "regions": ["North America", "Africa"],
+    "status": "Under Negotiation",
+    "year": null,
+    "description": "Negotiations launched in 2023; aimed at boosting trade and investment ties.",
+    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/morocco-maroc/index.aspx"
+  },
+  {
+    "name": "India-Canada Comprehensive Economic Partnership Agreement (CEPA)",
+    "parties": ["India", "Canada"],
+    "regions": ["South Asia", "North America"],
+    "status": "Under Negotiation",
+    "year": null,
+    "description": "Paused in 2023 amid diplomatic tensions; no timeline for resumption confirmed.",
+    "link": "https://commerce.gov.in/trade-agreements/"
+  },
+  {
+    "name": "Indonesia-Australia Comprehensive Economic Partnership Agreement (IA-CEPA)",
+    "parties": ["Indonesia", "Australia"],
+    "regions": ["Asia-Pacific"],
+    "status": "In Force",
+    "year": 2020,
+    "description": "Eliminates tariffs on most goods; significant market access for Australian services.",
+    "link": "https://www.dfat.gov.au/trade/agreements/in-force/ia-cepa"
+  }
+]

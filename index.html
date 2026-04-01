@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global FTA Tracker</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a365d 0%, #2a4a7f 60%, #2b6cb0 100%);
+      color: white;
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.4rem;
+    }
+    header p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 520px;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* ── Stats bar ── */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.75;
+    }
+
+    /* ── Controls ── */
+    .controls {
+      background: white;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .controls input,
+    .controls select {
+      padding: 0.55rem 0.9rem;
+      border: 1.5px solid #cbd5e0;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      background: #f7fafc;
+      color: #1a202c;
+      transition: border-color 0.15s;
+    }
+    .controls input { flex: 1; min-width: 200px; }
+    .controls select { min-width: 160px; }
+    .controls input:focus,
+    .controls select:focus {
+      outline: none;
+      border-color: #3182ce;
+      background: white;
+    }
+    .result-count {
+      margin-left: auto;
+      font-size: 0.85rem;
+      color: #718096;
+      white-space: nowrap;
+    }
+
+    /* ── Main grid ── */
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.2rem;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.3rem 1.4rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .card-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #1a365d;
+      flex: 1;
+    }
+
+    /* Status badges */
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .badge-in-force       { background: #c6f6d5; color: #22543d; }
+    .badge-under-neg      { background: #fefcbf; color: #744210; }
+    .badge-concluded      { background: #bee3f8; color: #1a365d; }
+    .badge-signed         { background: #e9d8fd; color: #44337a; }
+
+    .card-parties {
+      font-size: 0.83rem;
+      color: #4a5568;
+      line-height: 1.5;
+    }
+    .card-parties strong {
+      color: #2d3748;
+      font-weight: 600;
+    }
+    .card-description {
+      font-size: 0.82rem;
+      color: #718096;
+      line-height: 1.5;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 0.5rem;
+      border-top: 1px solid #edf2f7;
+      font-size: 0.78rem;
+      color: #a0aec0;
+    }
+    .card-year { font-weight: 500; }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: #3182ce;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .card-link:hover { color: #2b6cb0; text-decoration: underline; }
+    .card-link svg { width: 12px; height: 12px; }
+
+    .regions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+    .region-tag {
+      background: #ebf4ff;
+      color: #2b6cb0;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    /* No results */
+    .no-results {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: #a0aec0;
+      font-size: 1.1rem;
+      display: none;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.78rem;
+      color: #a0aec0;
+      border-top: 1px solid #e2e8f0;
+    }
+    footer a { color: #3182ce; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      .controls { padding: 1rem; }
+      main { padding: 0 1rem 2rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌐 Global FTA Tracker</h1>
+  <p>A reference guide to free trade agreements worldwide — search by country, filter by status, and link to official sources.</p>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-number" id="stat-total">—</div>
+      <div class="stat-label">Total Agreements</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number" id="stat-inforce">—</div>
+      <div class="stat-label">In Force</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number" id="stat-negotiating">—</div>
+      <div class="stat-label">Under Negotiation</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number" id="stat-concluded">—</div>
+      <div class="stat-label">Concluded / Pending</div>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <input
+    type="text"
+    id="search"
+    placeholder="🔍  Search by country, agreement name, or keyword…"
+    autocomplete="off"
+  />
+  <select id="filter-status">
+    <option value="">All Statuses</option>
+    <option value="In Force">In Force</option>
+    <option value="Under Negotiation">Under Negotiation</option>
+    <option value="Concluded">Concluded</option>
+    <option value="Signed">Signed</option>
+  </select>
+  <select id="filter-region">
+    <option value="">All Regions</option>
+    <option value="Africa">Africa</option>
+    <option value="Asia-Pacific">Asia-Pacific</option>
+    <option value="Caribbean">Caribbean</option>
+    <option value="Central America">Central America</option>
+    <option value="Central Asia">Central Asia</option>
+    <option value="Europe">Europe</option>
+    <option value="Middle East">Middle East</option>
+    <option value="North America">North America</option>
+    <option value="South America">South America</option>
+    <option value="South Asia">South Asia</option>
+  </select>
+  <span class="result-count" id="result-count"></span>
+</div>
+
+<main>
+  <div class="cards-grid" id="cards"></div>
+  <div class="no-results" id="no-results">No agreements match your search. Try different keywords or filters.</div>
+</main>
+
+<footer>
+  Data compiled from official government and intergovernmental sources including
+  <a href="https://rtais.wto.org/" target="_blank">WTO RTAIS</a>,
+  <a href="https://ustr.gov/trade-agreements" target="_blank">USTR</a>,
+  <a href="https://ec.europa.eu/trade/" target="_blank">European Commission</a>, and others.
+  For the latest status, always verify with the official source link on each card.
+  <br/>Last updated: April 2026.
+</footer>
+
+<script>
+  const BADGE_CLASS = {
+    "In Force":          "badge-in-force",
+    "Under Negotiation": "badge-under-neg",
+    "Concluded":         "badge-concluded",
+    "Signed":            "badge-signed",
+  };
+
+  let allAgreements = [];
+
+  async function loadData() {
+    try {
+      const res = await fetch("ftas.json");
+      if (!res.ok) throw new Error("Could not load ftas.json");
+      allAgreements = await res.json();
+      updateStats(allAgreements);
+      render(allAgreements);
+    } catch (e) {
+      document.getElementById("cards").innerHTML =
+        `<p style="color:red;padding:2rem;">Error loading data: ${e.message}</p>`;
+    }
+  }
+
+  function updateStats(data) {
+    document.getElementById("stat-total").textContent       = data.length;
+    document.getElementById("stat-inforce").textContent     = data.filter(a => a.status === "In Force").length;
+    document.getElementById("stat-negotiating").textContent = data.filter(a => a.status === "Under Negotiation").length;
+    document.getElementById("stat-concluded").textContent   = data.filter(a => a.status === "Concluded" || a.status === "Signed").length;
+  }
+
+  function filterData() {
+    const query   = document.getElementById("search").value.trim().toLowerCase();
+    const status  = document.getElementById("filter-status").value;
+    const region  = document.getElementById("filter-region").value;
+
+    return allAgreements.filter(a => {
+      const matchStatus = !status || a.status === status;
+      const matchRegion = !region || a.regions.includes(region);
+      const matchQuery  = !query || [
+        a.name,
+        ...a.parties,
+        a.description,
+        ...a.regions,
+        a.status,
+      ].some(s => s && s.toLowerCase().includes(query));
+      return matchStatus && matchRegion && matchQuery;
+    });
+  }
+
+  function render(data) {
+    const grid = document.getElementById("cards");
+    const noResults = document.getElementById("no-results");
+    const countEl = document.getElementById("result-count");
+
+    if (data.length === 0) {
+      grid.innerHTML = "";
+      noResults.style.display = "block";
+      countEl.textContent = "0 agreements";
+      return;
+    }
+    noResults.style.display = "none";
+    countEl.textContent = `${data.length} agreement${data.length !== 1 ? "s" : ""}`;
+
+    grid.innerHTML = data.map(a => {
+      const badgeClass = BADGE_CLASS[a.status] || "badge-concluded";
+      const yearText   = a.year ? `In force: ${a.year}` : "";
+      const partiesText = a.parties.slice(0, 6).join(", ") +
+        (a.parties.length > 6 ? ` + ${a.parties.length - 6} more` : "");
+
+      return `
+        <div class="card">
+          <div class="card-header">
+            <span class="card-name">${escHtml(a.name)}</span>
+            <span class="badge ${badgeClass}">${escHtml(a.status)}</span>
+          </div>
+          <div class="card-parties"><strong>Parties:</strong> ${escHtml(partiesText)}</div>
+          <div class="regions-row">
+            ${a.regions.map(r => `<span class="region-tag">${escHtml(r)}</span>`).join("")}
+          </div>
+          <div class="card-description">${escHtml(a.description)}</div>
+          <div class="card-footer">
+            <span class="card-year">${yearText}</span>
+            <a class="card-link" href="${escAttr(a.link)}" target="_blank" rel="noopener">
+              Official source
+              <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 2H2.5A.5.5 0 002 2.5v7a.5.5 0 00.5.5h7a.5.5 0 00.5-.5V7M7 2h3m0 0v3m0-3L5.5 6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>`;
+    }).join("");
+  }
+
+  function escHtml(str) {
+    return String(str ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+  function escAttr(str) {
+    // Only allow http/https URLs
+    const s = String(str ?? "").trim();
+    return (s.startsWith("http://") || s.startsWith("https://")) ? s : "#";
+  }
+
+  // Wire up controls
+  ["search","filter-status","filter-region"].forEach(id => {
+    document.getElementById(id).addEventListener("input", () => render(filterData()));
+  });
+
+  loadData();
+</script>
+</body>
+</html>
