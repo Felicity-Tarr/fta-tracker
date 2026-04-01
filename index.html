@@ -148,11 +148,48 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
       flex-shrink: 0;
+      position: relative;
+      cursor: default;
     }
     .badge-in-force       { background: #c6f6d5; color: #22543d; }
     .badge-under-neg      { background: #fefcbf; color: #744210; }
     .badge-concluded      { background: #bee3f8; color: #1a365d; }
     .badge-signed         { background: #e9d8fd; color: #44337a; }
+
+    /* ── Tooltip ── */
+    .badge .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      right: 0;
+      width: 220px;
+      background: #1a202c;
+      color: #e2e8f0;
+      font-size: 0.78rem;
+      font-weight: 400;
+      line-height: 1.5;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 0.55rem 0.75rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      transition: opacity 0.15s, visibility 0.15s;
+      z-index: 100;
+    }
+    .badge .tooltip::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 12px;
+      border: 6px solid transparent;
+      border-top-color: #1a202c;
+    }
+    .badge:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
 
     .card-parties {
       font-size: 0.83rem;
@@ -216,6 +253,58 @@
       font-size: 1.1rem;
       display: none;
     }
+
+    /* ── Zonos cipher badge ── */
+    .zonos-badge {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+    }
+    .zonos-badge img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+    .zonos-badge .zt {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      top: calc(100% + 7px);
+      right: 0;
+      width: 170px;
+      background: #1a202c;
+      color: #e2e8f0;
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 1.4;
+      padding: 0.45rem 0.65rem;
+      border-radius: 7px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      transition: opacity 0.15s, visibility 0.15s;
+      z-index: 100;
+      white-space: normal;
+    }
+    .zonos-badge .zt::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      right: 8px;
+      border: 6px solid transparent;
+      border-bottom-color: #1a202c;
+    }
+    .zonos-badge:hover .zt {
+      visibility: visible;
+      opacity: 1;
+    }
+    /* make card relative so badge positions correctly */
+    .card { position: relative; }
 
     /* ── Footer ── */
     footer {
@@ -287,6 +376,10 @@
     <option value="South America">South America</option>
     <option value="South Asia">South Asia</option>
   </select>
+  <select id="filter-zonos">
+    <option value="">All Agreements</option>
+    <option value="zonos">Zonos Only</option>
+  </select>
   <span class="result-count" id="result-count"></span>
 </div>
 
@@ -305,6 +398,13 @@
 </footer>
 
 <script>
+  const BADGE_TOOLTIPS = {
+    "In Force":          "This agreement is active and legally binding. Both parties have ratified it and tariff reductions are being applied.",
+    "Under Negotiation": "Talks are ongoing but no deal has been finalised yet. Terms are still being agreed between the parties.",
+    "Concluded":         "A deal has been reached and signed, but not all parties have completed ratification. Not yet in effect.",
+    "Signed":            "The agreement has been formally signed but has not yet entered into force pending ratification.",
+  };
+
   const BADGE_CLASS = {
     "In Force":          "badge-in-force",
     "Under Negotiation": "badge-under-neg",
@@ -338,10 +438,12 @@
     const query   = document.getElementById("search").value.trim().toLowerCase();
     const status  = document.getElementById("filter-status").value;
     const region  = document.getElementById("filter-region").value;
+    const zonos   = document.getElementById("filter-zonos").value;
 
     return allAgreements.filter(a => {
       const matchStatus = !status || a.status === status;
       const matchRegion = !region || a.regions.includes(region);
+      const matchZonos  = !zonos  || a.zonos === true;
       const matchQuery  = !query || [
         a.name,
         ...a.parties,
@@ -349,7 +451,7 @@
         ...a.regions,
         a.status,
       ].some(s => s && s.toLowerCase().includes(query));
-      return matchStatus && matchRegion && matchQuery;
+      return matchStatus && matchRegion && matchZonos && matchQuery;
     });
   }
 
@@ -373,11 +475,16 @@
       const partiesText = a.parties.slice(0, 6).join(", ") +
         (a.parties.length > 6 ? ` + ${a.parties.length - 6} more` : "");
 
+      const zonosBadge = a.zonos
+        ? `<span class="zonos-badge"><img src="cipher-lightbackground (1) (2) copy.svg" alt="Zonos" /><span class="zt">Honored by Zonos</span></span>`
+        : "";
+
       return `
         <div class="card">
+          ${zonosBadge}
           <div class="card-header">
             <span class="card-name">${escHtml(a.name)}</span>
-            <span class="badge ${badgeClass}">${escHtml(a.status)}</span>
+            <span class="badge ${badgeClass}">${escHtml(a.status)}<span class="tooltip">${escHtml(BADGE_TOOLTIPS[a.status] ?? "")}</span></span>
           </div>
           <div class="card-parties"><strong>Parties:</strong> ${escHtml(partiesText)}</div>
           <div class="regions-row">
@@ -411,7 +518,7 @@
   }
 
   // Wire up controls
-  ["search","filter-status","filter-region"].forEach(id => {
+  ["search","filter-status","filter-region","filter-zonos"].forEach(id => {
     document.getElementById(id).addEventListener("input", () => render(filterData()));
   });
 

@@ -6,7 +6,8 @@
     "status": "In Force",
     "year": 2020,
     "description": "Replaces NAFTA; covers trade in goods, services, digital trade, IP, and labor standards.",
-    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement"
+    "link": "https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement",
+    "zonos": true
   },
   {
     "name": "Comprehensive and Progressive Agreement for Trans-Pacific Partnership (CPTPP)",
@@ -33,7 +34,8 @@
     "status": "In Force",
     "year": 2021,
     "description": "Post-Brexit trade deal covering goods, services, fisheries, and regulatory cooperation.",
-    "link": "https://www.gov.uk/government/publications/ukeu-trade-and-cooperation-agreement-ts-no82021"
+    "link": "https://www.gov.uk/government/publications/ukeu-trade-and-cooperation-agreement-ts-no82021",
+    "zonos": true
   },
   {
     "name": "African Continental Free Trade Area (AfCFTA)",
@@ -87,7 +89,8 @@
     "status": "In Force",
     "year": 2019,
     "description": "Covers nearly all trade between EU and Japan; one of the largest bilateral trade deals.",
-    "link": "https://ec.europa.eu/trade/policy/in-focus/eu-japan-economic-partnership-agreement/"
+    "link": "https://ec.europa.eu/trade/policy/in-focus/eu-japan-economic-partnership-agreement/",
+    "zonos": true
   },
   {
     "name": "EU-Canada Comprehensive Economic and Trade Agreement (CETA)",
@@ -96,7 +99,8 @@
     "status": "In Force",
     "year": 2017,
     "description": "Provisionally applied since 2017; covers goods, services, investment, and government procurement.",
-    "link": "https://ec.europa.eu/trade/policy/in-focus/ceta/"
+    "link": "https://ec.europa.eu/trade/policy/in-focus/ceta/",
+    "zonos": true
   },
   {
     "name": "EU-South Korea Free Trade Agreement",
@@ -159,7 +163,8 @@
     "status": "Concluded",
     "year": null,
     "description": "Concluded in 2023; pending ratification — will eliminate tariffs on most goods.",
-    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/new-zealand/"
+    "link": "https://ec.europa.eu/trade/policy/countries-and-regions/countries/new-zealand/",
+    "zonos": true
   },
   {
     "name": "EU-Australia Free Trade Agreement",
@@ -504,15 +509,6 @@
     "link": "https://www.mofa.go.jp/policy/economy/fta/uk.html"
   },
   {
-    "name": "Japan-EU Economic Partnership Agreement (EPA)",
-    "parties": ["Japan", "European Union"],
-    "regions": ["Asia-Pacific", "Europe"],
-    "status": "In Force",
-    "year": 2019,
-    "description": "Creates a trade zone covering ~635 million people; eliminates most tariffs.",
-    "link": "https://www.mofa.go.jp/policy/economy/fta/eu.html"
-  },
-  {
     "name": "India-UAE Comprehensive Economic Partnership Agreement (CEPA)",
     "parties": ["India", "United Arab Emirates"],
     "regions": ["South Asia", "Middle East"],
@@ -808,15 +804,6 @@
     "year": 2009,
     "description": "Limited preferential deal covering around 450 tariff lines; upgrade under discussion.",
     "link": "https://commerce.gov.in/trade-agreements/"
-  },
-  {
-    "name": "Canada-European Union Comprehensive Economic and Trade Agreement (CETA)",
-    "parties": ["Canada", "European Union"],
-    "regions": ["North America", "Europe"],
-    "status": "In Force",
-    "year": 2017,
-    "description": "Provisionally applied since 2017; covers goods, services, investment, and procurement.",
-    "link": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/ceta-aecg/index.aspx"
   },
   {
     "name": "Canada-Ukraine Free Trade Agreement (CUFTA)",
